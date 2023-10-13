@@ -1,0 +1,205 @@
+:root {
+    --header-footer-bg: #222831;
+    --bg: #393E46;
+    --bright: #00ADB5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #EEEEEE;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: var(--bg);
+}
+
+header {
+    background: var(--header-footer-bg);
+    color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.bird-info-div {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid var(--bright);
+}
+
+.bird-info {
+    text-align: left;
+    /* items inside are put in a row, with space between */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-info p {
+    font-size: 1em;
+}
+
+.bird-info a {
+    text-decoration: none;
+}
+
+.bird-info a:hover {
+    color: #49e065;
+    text-decoration: underline;
+}
+
+.bird-info p span {
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #ccffd5;
+    text-decoration: underline;
+}
+
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #f1f1f1;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #ddd;
+}
+
+.graphs-div {
+    padding: 20px;
+    border-bottom: 2px solid var(--bright);
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.chart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.chart img {
+    height: 25vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .back-button {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+.gbif-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.gbif-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00ADB5; /* #4CAF50 */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.gbif-link a:hover {
+    background-color: #45a049;
+}
+
+.common-names-div {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.common-names-div h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.common-names-div table {
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.common-names-div th,
+.common-names-div td {
+    padding: 2px 20px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.common-names-div th {
+    background-color: #555555;
+    color: white;
+}
+
+.common-names-div tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.common-names-div tbody tr:nth-child(odd) {
+    background-color: #f1f1f1; /* Specify the background color for odd rows */
+}
+
+footer {
+    font-size: 12px;
+    background: var(--header-footer-bg);
+    text-align: center;
+    padding: 4px 0;
+    width: 100%;
+    bottom: 0;
+}
