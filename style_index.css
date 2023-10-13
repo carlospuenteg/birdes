@@ -1,0 +1,107 @@
+:root {
+    --header-footer-bg: #222831;
+    --bg: #393E46;
+    --bird-item-bg: #00ADB5;
+    --bird-item-bg-hover: #8cd576;
+    --bird-item-txt: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    background: var(--bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--header-footer-bg);
+    color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    position: relative; /* Added position relative */
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.total-observations {
+    font-weight: bold;
+    position: absolute; /* Added position absolute */
+    top: 50%; /* Positions it at the vertical center */
+    right: 20px; /* Adjust the right positioning as needed */
+    transform: translateY(-50%); /* Centers it vertically */
+}
+
+
+main {
+    padding: 20px;
+    padding-bottom: 60px;  /* Added padding bottom */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bird-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bird-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: var(--bird-item-bg);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.bird-item:hover {
+    background: var(--bird-item-bg-hover);
+}
+
+.bird-item a {
+    text-decoration: none;
+    color: var(--bird-item-txt);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.observation-count {
+    background: #DAFFFB;
+    color: black;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    font-size: 12px;
+    background: var(--header-footer-bg);
+    color: #f1f1f1;
+    text-align: center;
+    padding: 4px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
