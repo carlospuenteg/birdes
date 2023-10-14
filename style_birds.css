@@ -48,7 +48,6 @@ header h1 {
 
 .bird-info {
     text-align: left;
-    /* items inside are put in a row, with space between */
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -62,11 +61,6 @@ header h1 {
     text-decoration: none;
 }
 
-.bird-info a:hover {
-    color: #49e065;
-    text-decoration: underline;
-}
-
 .bird-info p span {
     font-weight: bold;
 }
@@ -75,14 +69,9 @@ header a {
     text-decoration: none;
 }
 
-header a:hover {
-    color: #ccffd5;
-    text-decoration: underline;
-}
-
 .back-button {
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 15px;
     background: #f1f1f1;
     color: #333;
@@ -121,39 +110,24 @@ header a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .back-button {
-        top: 10px;
-        left: 10px;
-    }
-}
-
 .gbif-link {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10px;
     right: 15px;
 }
 
 .gbif-link a {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #00ADB5; /* #4CAF50 */
+    padding: 5px 10px;
+    background-color: var(--bright);
+    color: #222831;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .gbif-link a:hover {
-    background-color: #45a049;
+    background-color: #008B8B;
 }
 
 .common-names-div {
@@ -192,7 +166,7 @@ header a:hover {
 }
 
 .common-names-div tbody tr:nth-child(odd) {
-    background-color: #f1f1f1; /* Specify the background color for odd rows */
+    background-color: #f1f1f1;
 }
 
 footer {
@@ -202,4 +176,55 @@ footer {
     padding: 4px 0;
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .bird-info {
+        flex-direction: column;
+    }
+
+    .bird-info p {
+        margin-bottom: 10px;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .chart img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .common-names-div table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .common-names-div table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .common-names-div table {
+        font-size: 10px;
+    }
+    .common-names-div td {
+        padding: 2px 7px;
+        text-align: left;
+        border-bottom: 1px solid black;
+        color: black;
+    }
 }

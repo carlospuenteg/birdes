@@ -98,10 +98,44 @@ footer {
 
 @media (max-width: 600px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     header h1 {
-        font-size: 24px;
+        font-size: 18px;
+        margin-bottom: 5px;  /* Added a little margin for spacing */
+    }
+    
+    .total-observations {
+        font-size: 10px;
+        top: 75%; 
+        right: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .bird-item {
+        padding: 8px;
+    }
+
+    .bird-item a {
+        font-size: 14px;
+    }
+
+    .observation-count {
+        padding: 2px 4px;
+        font-size: 10px;
+    }
+
+    .observation-count::after {
+        content: "";
+        display: none;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 2px 0;
     }
 }
