@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('fileInput').addEventListener('change', function() {
+        if (this.files.length > 0) {
+            processData();
+        }
+    });
+});
+
 function loadDataFromURL(url) {
     return new Promise((resolve, reject) => {
         fetch(url)

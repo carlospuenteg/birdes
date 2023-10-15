@@ -50,6 +50,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    margin-bottom: 2em; /* Added this line for the margin */
 }
 .ebird-lifelist-link {
     text-decoration: none;
