@@ -1,0 +1,98 @@
+:root {
+    --header-footer-bg: #222831;
+    --header-footer-bg-lighter: #364255;
+    --bg: #393E46;
+    --bird-item-bg: #00ADB5;
+    --bird-item-bg-hover: #8cd576;
+    --bird-item-txt: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--bird-item-txt);
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: var(--header-footer-bg);
+    padding: 1em 0;
+    text-align: center;
+}
+header {
+    position: relative; /* To allow for absolute positioning of children elements */
+}
+.go-back {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #00ADB5; /* Same color as bird item for consistency */
+    color: var(--bird-item-txt); /* Using the existing text color variable */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* For a smooth hover effect */
+}
+
+.go-back:hover {
+    background-color: #8cd576; /* Same hover color as bird item for consistency */
+}
+
+
+.content {
+    padding: 2em;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em; /* Added this line for the margin */
+}
+.ebird-lifelist-link {
+    text-decoration: none;
+    color: #00ADB5;
+}
+.btn-upload {
+    padding: 0.5em 1em;
+    background-color: var(--bird-item-bg);
+    border: none;
+    cursor: pointer;
+    color: var(--bird-item-txt);
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-upload:hover {
+    background-color: var(--bird-item-bg-hover);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: var(--header-footer-bg); /* Usamos el mismo color que los encabezados y pie de página para la coherencia */
+}
+table, th, td {
+    border: 1px solid var(--bird-item-bg);
+}
+
+tbody tr td:first-child {
+    background-color: var(--header-footer-bg-lighter);
+    color: var(--bird-item-txt);
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: var(--bird-item-bg-hover);
+}
