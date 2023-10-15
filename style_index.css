@@ -26,6 +26,23 @@ header {
     text-align: center;
     position: relative; /* Added position relative */
 }
+.species-sorter-button {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #00ADB5; /* Same color as bird item for consistency */
+    color: var(--bird-item-txt); /* Using the existing text color variable */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* For a smooth hover effect */
+}
+
+.species-sorter-button:hover {
+    background-color: #8cd576; /* Same hover color as bird item for consistency */
+}
 
 header h1 {
     font-family: 'Merriweather', serif;

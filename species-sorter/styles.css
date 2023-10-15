@@ -19,6 +19,27 @@ header, footer {
     padding: 1em 0;
     text-align: center;
 }
+header {
+    position: relative; /* To allow for absolute positioning of children elements */
+}
+.go-back {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #00ADB5; /* Same color as bird item for consistency */
+    color: var(--bird-item-txt); /* Using the existing text color variable */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* For a smooth hover effect */
+}
+
+.go-back:hover {
+    background-color: #8cd576; /* Same hover color as bird item for consistency */
+}
+
 
 .content {
     padding: 2em;
@@ -29,6 +50,23 @@ header, footer {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+}
+.ebird-lifelist-link {
+    text-decoration: none;
+    color: #00ADB5;
+}
+.btn-upload {
+    padding: 0.5em 1em;
+    background-color: var(--bird-item-bg);
+    border: none;
+    cursor: pointer;
+    color: var(--bird-item-txt);
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-upload:hover {
+    background-color: var(--bird-item-bg-hover);
 }
 
 table {
@@ -46,19 +84,5 @@ th, td {
 }
 
 tr:hover {
-    background-color: var(--bird-item-bg-hover);
-}
-
-.btn-upload {
-    padding: 0.5em 1em;
-    background-color: var(--bird-item-bg);
-    border: none;
-    cursor: pointer;
-    color: var(--bird-item-txt);
-    transition: background-color 0.3s;
-    margin-bottom: 20px;
-}
-
-.btn-upload:hover {
     background-color: var(--bird-item-bg-hover);
 }
