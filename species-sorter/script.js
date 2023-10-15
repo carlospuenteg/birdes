@@ -87,8 +87,11 @@ function displayDataInTable(data) {
     data.forEach(row => {
         const tr = document.createElement('tr');
         
-        // Add each cell to the row
-        ['commonName_es', 'scientificName', 'numObservations', 'Count'].forEach(key => {
+        const speciesCell = document.createElement('td');
+        speciesCell.textContent = `${row['commonName_es']} (${row['scientificName']})`;
+        tr.appendChild(speciesCell);
+        
+        ['numObservations', 'Count'].forEach(key => {
             const td = document.createElement('td');
             td.textContent = row[key];
             tr.appendChild(td);
