@@ -228,3 +228,9 @@ footer {
         color: black;
     }
 }
+
+@media (min-width: 1620px) {
+    .chart-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
