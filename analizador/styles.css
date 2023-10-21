@@ -7,7 +7,13 @@
     --bird-item-txt: white;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: var(--bg);
     color: var(--bird-item-txt);
@@ -20,29 +26,31 @@ header, footer {
     padding: 1em 0;
     text-align: center;
 }
+
 header {
-    position: relative; /* To allow for absolute positioning of children elements */
+    position: relative;
 }
+
 .go-back {
     font-weight: bold;
     position: absolute;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    background-color: #00ADB5; /* Same color as bird item for consistency */
-    color: var(--bird-item-txt); /* Using the existing text color variable */
+    background-color: #00ADB5;
+    color: var(--bird-item-txt);
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s; /* For a smooth hover effect */
+    transition: background-color 0.3s;
 }
 
 .go-back:hover {
-    background-color: #8cd576; /* Same hover color as bird item for consistency */
+    background-color: #8cd576;
 }
 
-
 .content {
+    flex: 1;
     padding: 2em;
 }
 
@@ -51,12 +59,14 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    margin-bottom: 2em; /* Added this line for the margin */
+    margin-bottom: 2em;
 }
+
 .ebird-lifelist-link {
     text-decoration: none;
     color: #00ADB5;
 }
+
 .btn-upload {
     padding: 0.5em 1em;
     background-color: var(--bird-item-bg);
@@ -77,8 +87,9 @@ table {
 }
 
 thead {
-    background-color: var(--header-footer-bg); /* Usamos el mismo color que los encabezados y pie de página para la coherencia */
+    background-color: var(--header-footer-bg);
 }
+
 table, th, td {
     border: 1px solid var(--bird-item-bg);
 }
@@ -95,4 +106,48 @@ th, td {
 
 tr:hover {
     background-color: var(--bird-item-bg-hover);
+}
+
+@media (max-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .go-back, header h1 {
+        position: static;
+        transform: none;
+    }
+
+    .go-back {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    footer p {
+        font-size: 3vw;
+    }
+    .content label {
+        font-size: 3.5vw;
+    }
+    #fileInput {
+        font-size: 3vw;
+    }
+    .go-back {
+        font-size: 3vw;
+    }
 }
